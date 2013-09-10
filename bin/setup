@@ -15,5 +15,6 @@ mkdir -p $OPENSHIFT_LEIN_DIR/bin
 cd $OPENSHIFT_LEIN_DIR/bin
 wget "https://raw.github.com/technomancy/leiningen/${version}/bin/lein"
 chmod a+x lein
+./lein
 
 client_result "Leiningen has been installed."
