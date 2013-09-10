@@ -1,5 +1,5 @@
 ---
-Name: Leiningen
+Name: lein
 Cartridge-Short-Name: LEIN
 Display-Name: Leiningen 2.3.2
 Description: Leiningen is the easiest way to use Clojure.
