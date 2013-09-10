@@ -7,7 +7,10 @@ case "$1" in
     version="$2"
 esac
 
-# Create additional directories required by the diy cartridge
-mkdir -p $OPENSHIFT_DIY_DIR/{logs,run}
+# Set the version if it is unset.
+[ -z "$version" ] && version=2.3.2
 
-client_result "Disclaimer: This is an experimental cartridge that provides a way to try unsupported languages, frameworks, and middleware on Openshift."
+# Install Leiningen.
+curl "https://raw.github.com/technomancy/leiningen/${version}/bin/lein" | sh
+
+client_result "Leiningen has been installed."
