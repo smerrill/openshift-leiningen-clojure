@@ -1,22 +1,18 @@
 %global cartridgedir %{_libexecdir}/openshift/cartridges/diy
 
-Summary:       DIY cartridge
-Name:          openshift-origin-cartridge-diy
-Version: 0.9.1
+Summary:       Leiningen cartridge
+Name:          openshift-origin-leiningen-clojure
+Version:       0.0.1
 Release:       1%{?dist}
 Group:         Development/Languages
 License:       ASL 2.0
 URL:           https://www.openshift.com
 Source0:       http://mirror.openshift.com/pub/openshift-origin/source/%{name}/%{name}-%{version}.tar.gz
-Requires:      rubygem(openshift-origin-node)
-Requires:      openshift-origin-node-util
-
-Obsoletes: openshift-origin-cartridge-diy-0.1
 
 BuildArch:     noarch
 
 %description
-DIY cartridge for openshift. (Cartridge Format V2)
+Leiningen cartridge for running Clojure on OpenShift.
 
 %prep
 %setup -q
