@@ -11,6 +11,9 @@ esac
 [ -z "$version" ] && version=2.3.2
 
 # Install Leiningen.
-curl "https://raw.github.com/technomancy/leiningen/${version}/bin/lein" | sh
+mkdir -p $OPENSHIFT_LEIN_DIR/bin
+cd $OPENSHIFT_LEIN_DIR/bin
+wget "https://raw.github.com/technomancy/leiningen/${version}/bin/lein"
+chmod a+x lein
 
 client_result "Leiningen has been installed."
